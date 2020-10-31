@@ -29,10 +29,13 @@ class ScrNflTeam extends Command {
           let nfl_team_id = await $team_media.find('a[data-link_name="1st CTA View Profile"]').attr('href') // teams/arizona-cardinals/
           nfl_team_id = nfl_team_id.replace('teams/', '').replace(/\//g, '')
           let official_website = await $team_media.find('a[data-link_name="2nd CTA View Full Site"]').attr('href') // teams/arizona-cardinals/
+          let logo_nflcom = await $team_media.find('figure.d3-o-media-object__figure source[media="(min-width:1024px)"]').attr('srcset')
           let team = new Team()
           team.name = name
           team.nfl_team_id = nfl_team_id
           team.official_website = official_website
+          team.logo_nflcom = logo_nflcom
+          console.log(`saving team now`)
           await team.save()
           let a = 1
         } catch (e) {
