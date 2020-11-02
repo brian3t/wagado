@@ -61,6 +61,11 @@ class ScrEspnGame extends Command {
             let home_team_found = await Team.findBy('name', a_team_name_abbr)
             if (! home_team_found instanceof Team) return
 
+            //now that we have hometeam and away team, let's find existing game
+            const query = Database.table('users')
+            if (username) {
+              query.where('username', username)
+            }
             let exist_or_new_game = Game.findOrNew(`teamh_id = ${home_team_found.id} AND teama_id = ${away_team_found.id} AND game_date = ${game_date_db}`,
               {
                 teamh_id: home_team_found.id, teama_id: away_team_found.id, game_date: game_date_db

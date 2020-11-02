@@ -1,9 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ccdf9b03-d8ed-4dee-8ae3-b27a7d6f9072" name="Default Changelist" comment="WIP: scrape teams">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Commands/ScrEspnGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/Commands/ScrEspnGame.js" afterDir="false" />
+    </list>
+    <list id="98f05734-05a6-4546-b0db-ced5755410bb" name="ide donot commit" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources/93132ee4-41a2-445f-95b3-d5e8f906ef4f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="DatabaseLocalColorSettings">
+    <colors>
+      <entry key="4d897158-4701-4d6b-bcd6-1bb286f14b17" value="Blue" />
+    </colors>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/.idea/workspace.xml">
+      <ranges>
+        <range start1="2" end1="2" start2="2" end2="52" changelist="98f05734-05a6-4546-b0db-ced5755410bb" />
+        <range start1="3" end1="4" start2="53" end2="60" changelist="98f05734-05a6-4546-b0db-ced5755410bb" />
+        <range start1="6" end1="7" start2="62" end2="247" changelist="ccdf9b03-d8ed-4dee-8ae3-b27a7d6f9072" />
+      </ranges>
+    </file>
+  </component>
+  <component name="ProjectId" id="1jboJwDx5EwGvsmYwf31H6LzXfB" />
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="/var/www/iecom" />
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="javascript.nodejs.core.library.configured.version" value="14.15.0" />
+    <property name="javascript.nodejs.core.library.typings.version" value="14.14.6" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ace" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="Docker" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RunManager" selected="Node.js.ace scr nfl games">
+    <configuration name="ace scr nfl games" type="NodeJSConfigurationType" application-parameters="scr_espn_game" path-to-js-file="ace" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <configuration name="ace scr nfl teams" type="NodeJSConfigurationType" application-parameters="scr_nfl_team" path-to-js-file="ace" working-dir="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Node.js.ace scr nfl teams" />
+      <item itemvalue="Node.js.ace scr nfl games" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ccdf9b03-d8ed-4dee-8ae3-b27a7d6f9072" name="Default Changelist" comment="" />
+      <changelist id="98f05734-05a6-4546-b0db-ced5755410bb" name="ide donot commit" comment="" />
+      <created>1604082083099</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1604082083099</updated>
+    </task>
+    <task id="LOCAL-00001" summary="WIP: scrape teams">
+      <created>1604120037214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604120037214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="WIP: scrape teams" />
+    <option name="LAST_COMMIT_MESSAGE" value="WIP: scrape teams" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="664" y="184" width="804" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604344885686">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="664" y="184" width="804" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1604344885686" />
+    <state x="718" y="274" key="#xdebugger.evaluate" timestamp="1604345001877">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="718" y="274" key="#xdebugger.evaluate/0.0.1920.1054@0.0.1920.1054" timestamp="1604345001877" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1604083325249">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1920.1054@0.0.1920.1054" timestamp="1604083325249" />
+    <state x="740" y="285" width="428" height="484" key="FileChooserDialogImpl" timestamp="1604086085333">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="740" y="285" width="428" height="484" key="FileChooserDialogImpl/0.0.1920.1054@0.0.1920.1054" timestamp="1604086085333" />
+    <state width="1878" height="346" key="GridCell.Tab.0.bottom" timestamp="1604345046598">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.0.bottom/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046598" />
+    <state width="1878" height="346" key="GridCell.Tab.0.center" timestamp="1604345046597">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.0.center/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046597" />
+    <state width="1878" height="346" key="GridCell.Tab.0.left" timestamp="1604345046597">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.0.left/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046597" />
+    <state width="1878" height="346" key="GridCell.Tab.0.right" timestamp="1604345046597">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.0.right/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046597" />
+    <state width="1878" height="346" key="GridCell.Tab.1.bottom" timestamp="1604345048082">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.1.bottom/0.0.1920.1054@0.0.1920.1054" timestamp="1604345048082" />
+    <state width="1878" height="346" key="GridCell.Tab.1.center" timestamp="1604345048082">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.1.center/0.0.1920.1054@0.0.1920.1054" timestamp="1604345048082" />
+    <state width="1878" height="346" key="GridCell.Tab.1.left" timestamp="1604345048081">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.1.left/0.0.1920.1054@0.0.1920.1054" timestamp="1604345048081" />
+    <state width="1878" height="346" key="GridCell.Tab.1.right" timestamp="1604345048082">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.1.right/0.0.1920.1054@0.0.1920.1054" timestamp="1604345048082" />
+    <state width="1878" height="346" key="GridCell.Tab.2.bottom" timestamp="1604345046539">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.2.bottom/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046539" />
+    <state width="1878" height="346" key="GridCell.Tab.2.center" timestamp="1604345046538">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.2.center/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046538" />
+    <state width="1878" height="346" key="GridCell.Tab.2.left" timestamp="1604345046538">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.2.left/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046538" />
+    <state width="1878" height="346" key="GridCell.Tab.2.right" timestamp="1604345046538">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.2.right/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046538" />
+    <state width="1878" height="346" key="GridCell.Tab.3.bottom" timestamp="1604345046539">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.3.bottom/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046539" />
+    <state width="1878" height="346" key="GridCell.Tab.3.center" timestamp="1604345046539">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.3.center/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046539" />
+    <state width="1878" height="346" key="GridCell.Tab.3.left" timestamp="1604345046539">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.3.left/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046539" />
+    <state width="1878" height="346" key="GridCell.Tab.3.right" timestamp="1604345046539">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="1878" height="346" key="GridCell.Tab.3.right/0.0.1920.1054@0.0.1920.1054" timestamp="1604345046539" />
+    <state width="256" height="477" key="HiddenNamespacesPopup" timestamp="1604087303977">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="256" height="477" key="HiddenNamespacesPopup/0.0.1920.1054@0.0.1920.1054" timestamp="1604087303977" />
+    <state x="449" y="163" key="SettingsEditor" timestamp="1604086741811">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="449" y="163" key="SettingsEditor/0.0.1920.1054@0.0.1920.1054" timestamp="1604086741811" />
+    <state width="498" height="445" key="SwitcherDM" timestamp="1604088033293">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state width="498" height="445" key="SwitcherDM/0.0.1920.1054@0.0.1920.1054" timestamp="1604088033293" />
+    <state x="805" y="443" width="304" height="169" key="VCS.ChangelistChooser" timestamp="1604120015675">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="805" y="443" width="304" height="169" key="VCS.ChangelistChooser/0.0.1920.1054@0.0.1920.1054" timestamp="1604120015675" />
+    <state x="555" y="264" width="804" height="528" key="Vcs.Push.Dialog.v2" timestamp="1604120038562">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="555" y="264" width="804" height="528" key="Vcs.Push.Dialog.v2/0.0.1920.1054@0.0.1920.1054" timestamp="1604120038562" />
+    <state x="825" y="291" width="826" height="644" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1604084274550">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="825" y="291" width="826" height="644" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.0.1920.1054@0.0.1920.1054" timestamp="1604084274550" />
+    <state x="750" y="444" width="413" height="168" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604082108953">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="750" y="444" width="413" height="168" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1054@0.0.1920.1054" timestamp="1604082108953" />
+    <state x="622" y="241" key="run.anything.popup" timestamp="1604086679620">
+      <screen x="0" y="0" width="1920" height="1054" />
+    </state>
+    <state x="622" y="241" key="run.anything.popup/0.0.1920.1054@0.0.1920.1054" timestamp="1604086679620" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/Commands/ScrNflTeam.js</url>
+          <line>39</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/Commands/ScrNflTeam.js</url>
+          <line>9</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/app/Commands/ScrEspnGame.js</url>
+          <line>73</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/@adonisjs/lucid/src/Lucid/Model/index.js</url>
+          <line>999</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/node_modules/@adonisjs/lucid/src/Lucid/Model/index.js</url>
+          <line>1007</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
