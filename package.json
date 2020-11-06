@@ -29,7 +29,8 @@
     "axios": "^0.21.0",
     "cheerio": "^1.0.0-rc.3",
     "moment": "^2.29.1",
-    "mysql2": "^2.2.5"
+    "mysql2": "^2.2.5",
+    "sleep": "^6.3.0"
   },
   "devDependencies": {},
   "autoload": {
