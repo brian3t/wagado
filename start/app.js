@@ -59,6 +59,7 @@ const aliases = {}
 const commands = [
   'App/Commands/ScrNflTeam',
   'App/Commands/ScrEspnGame',
+  'App/Commands/UserMng',
 ]
 
 module.exports = {providers, aceProviders, aliases, commands}
