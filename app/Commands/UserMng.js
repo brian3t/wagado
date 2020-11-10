@@ -3,7 +3,7 @@
 /**
  * Using PHP Yii2 usario https://yii2-usuario.readthedocs.io/en/latest/installation/console-commands/
  * to add / confirm users in batch mode
- * To skip welcome email, go to vendor/usuario/
+ * To skip welcome email, go to vendor/usuario/src/service/user/UserCreateService
  * and comment out the email part
  */
 
