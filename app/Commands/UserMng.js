@@ -11,7 +11,7 @@ const {Command} = require('@adonisjs/ace')
 const fs = require('fs')
 const _ = require('lodash')
 const Db = use('Database')
-const User = use('app/Models/User')
+const Profile = use('App/Models/Profile')
 const {exec, execSync} = require('child_process');
 
 const CR_USER_CMD = `./yii user/create ` // ./yii user/create <email> <username> [password] [role]
@@ -20,7 +20,7 @@ const CONF_USER_CMD = `./yii user/confirm `
 const DEL_USER_CMD = `yes | ./yii user/delete `
 
 const USERS = ['James Smith', 'Michael Smith', 'Robert Smith', 'David Smith', 'James Johnson', 'Michael Johnson', 'William Smith', 'James Williams', 'Robert Johnson', 'Mary Smith', 'James Brown', 'John Smith', 'David Johnson', 'Michael Brown', 'Maria Garcia', 'Michael Williams', 'Michael Jones', 'James Jones', 'Maria Rodriguez', 'Robert Brown', 'Michael Miller', 'Robert Jones', 'Robert Williams', 'William Johnson', 'James Davis', 'Mary Johnson', 'Maria Martinez', 'Charles Smith', 'David Brown', 'Robert Miller', 'James Miller', 'John Williams', 'Richard Smith', 'David Williams', 'David Jones', 'Michael Davis', 'William Brown', 'David Miller', 'Mary Williams', 'Jennifer Smith', 'William Jones', 'John Johnson', 'John Miller', 'Daniel Smith', 'Thomas Smith', 'Linda Smith', 'James Wilson', 'Robert Davis', 'Mary Brown', 'Mary Jones', 'Patricia Smith', 'James Moore', 'James Taylor', 'William Miller', 'John Davis', 'Charles Johnson', 'William Davis', 'John Jones', 'Richard Johnson', 'James Anderson', 'Robert Taylor', 'Barbara Smith', 'Michael Moore', 'James Martin', 'Michael Wilson', 'James Thomas', 'Joseph Smith', 'James White', 'Mary Miller', 'Robert Anderson', 'Robert Wilson', 'Charles Williams', 'Jennifer Johnson', 'Michael Anderson', 'John Brown', 'Michael Martin', 'James Thompson', 'Mark Smith', 'Michael Thomas', 'David Anderson', 'Linda Johnson', 'Elizabeth Smith', 'Mary Davis', 'James Jackson', 'Michael Taylor', 'Charles Brown', 'Daniel Garcia', 'James Lee', 'Michael Thompson', 'Daniel Johnson', 'David Wilson', 'Thomas Johnson', 'John Anderson', 'Robert Moore', 'John Wilson', 'Richard Brown', 'Charles Jones', 'Mark Johnson', 'Robert Lee', 'Patricia Johnson', 'Michael Lee', 'David Garcia', 'Robert Martin', 'Jennifer Jones', 'Daniel Martinez', 'John Thomas', 'John Martin', 'Richard Miller', 'Michael White', 'Robert Thomas', 'Barbara Johnson', 'Susan Smith', 'Robert Thompson', 'Daniel Rodriguez', 'Robert White', 'William Wilson', 'David Lee', 'Richard Jones', 'John Taylor', 'John Moore', 'Thomas Brown', 'Richard Williams', 'William Taylor', 'David Martin', 'David Martinez', 'William Moore', 'David Rodriguez', 'Thomas Williams', 'Linda Williams', 'David Moore', 'Daniel Miller', 'William Martin', 'Joseph Johnson', 'David White', 'Michael Jackson', 'Charles Davis', 'William White', 'Patricia Williams', 'Thomas Jones', 'David Thomas', 'William Thomas', 'Jennifer Brown', 'John Thompson', 'Charles Miller', 'Robert Jackson', 'David Thompson', 'Elizabeth Johnson', 'Mary Wilson', 'David Taylor', 'John Lee', 'Jennifer Williams', 'John White', 'Michael Garcia', 'Linda Jones', 'Joseph Williams', 'Linda Brown', 'William Thompson', 'Thomas Miller', 'Mary Anderson', 'Patricia Brown', 'Richard Davis', 'Daniel Brown', 'William Anderson', 'Jennifer Miller', 'Mary Thomas', 'Mary Moore', 'Patricia Jones', 'Mary Martin', 'Barbara Williams', 'Daniel Williams', 'Joseph Brown', 'Mary Taylor', 'Michael Martinez', 'Barbara Brown', 'William Jackson', 'Mark Miller', 'Linda Miller', 'Joseph Miller', 'Mary White', 'David Davis', 'Daniel Jones', 'David Jackson', 'Mary Thompson', 'Mark Williams', 'Susan Johnson', 'Barbara Jones', 'Mary Jackson', 'Jennifer Davis', 'Patricia Miller', 'Linda Davis', 'Thomas Davis', 'Richard Anderson', 'Elizabeth Garcia', 'Charles Wilson', 'Elizabeth Rodriguez', 'Robert Garcia', 'John Jackson', 'William Williams', 'Michael Rodriguez', 'Barbara Miller', 'Elizabeth Williams', 'Elizabeth Brown', 'William Lee', 'Mary Garcia', 'Elizabeth Martinez', 'Robert Martinez', 'Elizabeth Jones', 'Patricia Davis', 'Joseph Jones', 'Thomas Moore', 'Daniel Taylor', 'Charles Moore', 'Elizabeth Miller', 'Charles Taylor', 'Mary Martinez', 'Daniel Davis', 'Barbara Davis', 'Susan Miller', 'Joseph Davis', 'Mark Brown', 'Charles Thomas', 'Richard Wilson', 'Thomas Wilson', 'Robert Rodriguez', 'Mark Davis', 'Mary Lee', 'Mark Jones', 'Charles Anderson', 'Richard Taylor', 'Richard Martin', 'Thomas Martin', 'Richard Moore', 'Charles White', 'Mark Anderson', 'Susan Brown', 'John Garcia', 'Jennifer Wilson', 'Richard White', 'Jennifer Anderson', 'Thomas Anderson', 'John Martinez', 'Patricia Garcia', 'Daniel Martin', 'Charles Jackson', 'Jennifer Lee', 'Richard Thomas', 'Charles Thompson', 'Richard Thompson', 'Charles Martin', 'Elizabeth Davis', 'Thomas Taylor', 'Linda Wilson', 'Richard Garcia', 'Joseph Martin', 'Joseph Thomas', 'Daniel Lee', 'Jennifer Taylor', 'Richard Lee', 'Thomas White', 'Jennifer Martin', 'Linda Anderson', 'Mary Rodriguez', 'Joseph Garcia', 'Susan Williams', 'Joseph Martinez', 'Jennifer Garcia', 'Linda Taylor', 'Daniel Wilson', 'Patricia Martinez', 'Mark Wilson', 'Linda Moore', 'Jennifer Moore', 'Susan Jones', 'John Rodriguez', 'Richard Martinez', 'Daniel Moore', 'Patricia Rodriguez', 'Linda Martin', 'Jennifer Rodriguez', 'Patricia Taylor', 'Thomas Lee', 'Charles Lee', 'Jennifer Thompson', 'Linda Thomas', 'Patricia Thomas', 'Patricia Martin', 'Jennifer White', 'Jennifer Martinez', 'Patricia Wilson', 'Patricia Anderson', 'Barbara Wilson', 'Richard Rodriguez', 'Patricia Moore', 'Daniel Anderson', 'Joseph Wilson', 'Daniel White', 'Jennifer Thomas', 'Joseph White', 'Daniel Thompson', 'Thomas Thompson', 'Barbara Anderson', 'Linda White', 'Mark Thompson', 'Thomas Jackson', 'Joseph Moore', 'Linda Thompson', 'Linda Jackson', 'Susan Davis', 'Elizabeth Wilson', 'Joseph Taylor', 'Richard Jackson', 'Barbara Taylor', 'Joseph Rodriguez', 'Linda Lee', 'Elizabeth Anderson', 'Joseph Lee', 'Mark Taylor', 'Susan Anderson', 'Patricia White', 'Patricia Jackson', 'Patricia Thompson', 'Jennifer Jackson', 'Barbara Moore', 'Daniel Thomas', 'Joseph Jackson', 'Barbara Thomas', 'Barbara Martin', 'Elizabeth Martin', 'Elizabeth Moore', 'Joseph Anderson', 'Mark Thomas', 'Barbara Jackson', 'Joseph Thompson', 'Elizabeth Taylor', 'Barbara White', 'Barbara Thompson', 'Elizabeth Thomas', 'Elizabeth Thompson', 'Daniel Jackson', 'Susan Wilson', 'Elizabeth White', 'Susan Martin', 'Linda Garcia', 'Susan Taylor', 'Susan Lee', 'William Rodriguez', 'Susan Moore', 'Susan Thomas', 'Patricia Lee', 'Linda Martinez', 'Elizabeth Lee', 'Susan Thompson', 'Elizabeth Jackson', 'James Garcia', 'Mark Moore', 'Mark White', 'Mark Jackson', 'Barbara Lee', 'Susan White', 'Linda Rodriguez', 'James Martinez', 'Mark Lee', 'William Martinez', 'William Garcia', 'Mark Martin', 'James Rodriguez', 'Mark Martinez', 'Mark Garcia', 'Susan Jackson', 'Thomas Garcia', 'Thomas Martinez', 'Barbara Garcia', 'Barbara Rodriguez', 'Mark Rodriguez', 'Barbara Martinez', 'Susan Garcia', 'Susan Martinez', 'Susan Rodriguez', 'Maria Smith', 'Thomas Rodriguez', 'Charles Garcia', 'Maria Johnson', 'Charles Martinez', 'Thomas Thomas', 'Maria Williams', 'Maria Martin', 'Charles Rodriguez', 'Maria Brown', 'Maria Jones', 'Maria Miller', 'Maria Davis', 'Maria Thomas', 'Maria Wilson', 'Maria Anderson', 'Maria Lee', 'Maria Thompson', 'Maria Moore', 'Maria White', 'Maria Taylor', 'Maria Jackson']
-const TIMEOUT_FORCE_CLOSE = 600
+const TIMEOUT_FORCE_CLOSE = 10
 
 class UserMng extends Command {
   static get signature(){
@@ -102,10 +102,25 @@ class UserMng extends Command {
     assigned_usr_avas = assigned_usr_avas.map(assigned_usr_ava => assigned_usr_ava.usr_ava)
     let all_ava_files = fs.readdirSync('../wagapi/web/img/avatars')
     all_ava_files = _.difference(all_ava_files, assigned_usr_avas)
-    let users_wo_usr_ava = await User.select('id').whereNull('usr_ava') here debugging
-    for (let ava_file of all_ava_files) {
+    let users_wo_usr_ava = await Profile.query().select('user_id').whereNull('usr_ava').fetch()
+    users_wo_usr_ava = users_wo_usr_ava.toJSON()
+    users_wo_usr_ava = users_wo_usr_ava.map(user_wo_usr_ava => user_wo_usr_ava.user_id) //pluck userid into array
 
+    let user_ava_assoc = {} //mapping of userid -> usr_ava
+    for (let ava_file of all_ava_files) {
+      let user_to_map = users_wo_usr_ava.pop()
+      user_ava_assoc[user_to_map] = ava_file
     }
+
+    //mapping done. Now writing to db
+    for (let user_id in user_ava_assoc){
+      const affectedRows = await Db
+        .table('profile')
+        .where('user_id', user_id)
+        .update('usr_ava', user_ava_assoc[user_id])
+      if (affectedRows !== 1) console.error(`Error updating userid ${user_id}`)
+    }
+
     console.log(`Assign ava done`)
   }
 
