@@ -8,7 +8,10 @@
  */
 
 const {Command} = require('@adonisjs/ace')
+const fs = require('fs')
+const _ = require('lodash')
 const Db = use('Database')
+const User = use('app/Models/User')
 const {exec, execSync} = require('child_process');
 
 const CR_USER_CMD = `./yii user/create ` // ./yii user/create <email> <username> [password] [role]
@@ -85,6 +88,27 @@ class UserMng extends Command {
     console.log(`Cleanup done`)
   }
 
+  /**
+   * Assign user_avatar to all users
+   * 1- Grabs all profile's usr_ava from DB
+   * 2- Grabs all files in ../wagapi/web/img/avatars folder
+   * 3- Now we have a list of unassigned files
+   * 4- For each file, assign to a user without ava
+   */
+  async assign_ava(){
+    this.info('Assigning avatars to users')
+    let assigned_usr_avas = await Db.select('usr_ava').from('profile').whereNotNull(`usr_ava`)
+
+    assigned_usr_avas = assigned_usr_avas.map(assigned_usr_ava => assigned_usr_ava.usr_ava)
+    let all_ava_files = fs.readdirSync('../wagapi/web/img/avatars')
+    all_ava_files = _.difference(all_ava_files, assigned_usr_avas)
+    let users_wo_usr_ava = await User.select('id').whereNull('usr_ava') here debugging
+    for (let ava_file of all_ava_files) {
+
+    }
+    console.log(`Assign ava done`)
+  }
+
   async handle(args, options){
     this.info('Manage users')
 
@@ -101,6 +125,9 @@ class UserMng extends Command {
           break
         case 'cleanup':
           await this.cleanup();
+          break
+        case 'assign_ava':
+          await this.assign_ava();
           break
         default:
           break

@@ -28,6 +28,7 @@
     "@adonisjs/shield": "^1.0.8",
     "axios": "^0.21.0",
     "cheerio": "^1.0.0-rc.3",
+    "lodash": "^4.17.20",
     "moment": "^2.29.1",
     "mysql2": "^2.2.5",
     "sleep": "^6.3.0"
