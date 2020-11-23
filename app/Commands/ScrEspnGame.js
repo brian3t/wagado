@@ -89,8 +89,7 @@ class ScrEspnGame extends Command {
               if (! game_date_time.isValid()) return
               exist_or_new_game.game_time = game_date_time.format('HH:mm')
               await exist_or_new_game.save()
-              let td_location = $($game_tr.find('td.schedule-location')).text()
-              exist_or_new_game.location_text = td_location
+              exist_or_new_game.location_text = $($game_tr.find('td.schedule-location')).text()
               await exist_or_new_game.save()
             } else { // PAST GAME
               let a_result = $third_td.find('a[name="&lpos=nfl:schedule:score"]')
@@ -112,11 +111,11 @@ class ScrEspnGame extends Command {
                   let team_abbr = team_point[0], point = team_point[1] //ATL 25
                   if (home_team_found.abbr === team_abbr) {
                     exist_or_new_game.hpoint = point
-                    exist_or_new_game.save()
+                    exist_or_new_game.api_save()
                   }
                   if (away_team_found.abbr === team_abbr) {
                     exist_or_new_game.apoint = point
-                    exist_or_new_game.save()
+                    exist_or_new_game.api_save()
                   }
                 })
               }

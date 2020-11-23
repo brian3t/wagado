@@ -60,6 +60,7 @@ const commands = [
   'App/Commands/ScrNflTeam',
   'App/Commands/ScrEspnGame',
   'App/Commands/UserMng',
+  'App/Commands/Test',
 ]
 
 module.exports = {providers, aceProviders, aliases, commands}
