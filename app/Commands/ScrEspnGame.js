@@ -98,11 +98,11 @@ class ScrEspnGame extends Command {
                 let all_teams_all_points = [] //store all teams' points
                 let points = a_result.split(',')
                 if (points.length === 2) {
-                  let point_1 = points[0].split(' ')
+                  let point_1 = points[0].trim().split(' ')
                   if (point_1.length === 2) {
                     all_teams_all_points.push(point_1)
                   }
-                  let point_2 = points[0].split(' ')
+                  let point_2 = points[1].trim().split(' ')
                   if (point_2.length === 2) {
                     all_teams_all_points.push(point_2)
                   }
@@ -119,12 +119,11 @@ class ScrEspnGame extends Command {
                   }
                 })
               }
-              let a = 1
 
             }
           })
         } catch (e) {
-          console.error(`Error 57: `, e)
+          console.error(`Error scrEspnGame 126: `, e)
         }
       })
       console.log(`After 5 secs we close db, so that process exit; no matter what is running. Time's up!`)
@@ -132,7 +131,7 @@ class ScrEspnGame extends Command {
         Database.close()
       }, 5000)
     } catch (e) {
-      console.error(`error 61: `, e)
+      console.error(`error 134: `, e)
     }
   }
 }
